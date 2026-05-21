@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidcam-tools"
+version = "0.1.0"
+description = "Small Python utilities for dental 3D files and AI-CAD evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Cameron Cross" },
+    { name = "Massimo Venezia" },
+]
+keywords = ["dental", "cad", "crown", "mesh", "point-cloud", "ai", "ml"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.26",
+    "trimesh>=4.0",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://aid-cam.com"
+Repository = "https://github.com/AID-CAM/aidcam-tools"
+Issues = "https://github.com/AID-CAM/aidcam-tools/issues"
+
+[project.scripts]
+aidcam-mesh-to-pc = "aidcam_tools.mesh_to_pointcloud:main"
+aidcam-eval-intellident = "aidcam_tools.eval_intellident:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aidcam_tools*"]

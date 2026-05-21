@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.tsbuildinfo
+
+# venvs
+.venv/
+venv/
+env/
+
+# editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+._*
+.__*
+
+# data / output
+/data/
+/outputs/
+*.npz
+!tests/**/*.npz
