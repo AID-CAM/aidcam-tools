@@ -26,7 +26,6 @@ plumbing — the boring useful kind.
 | `aidcam_tools.mesh_to_pointcloud` | Load STL/OBJ/PLY meshes via trimesh; uniformly sample N points from the surface; save to `.npz`. |
 | `aidcam_tools.metrics` | Chamfer distance (L1, L2), symmetric Hausdorff distance, per-tooth-class breakdown for FDI numbering. |
 | `aidcam_tools.fdi` | FDI tooth-numbering helpers: quadrant, position, is_molar, is_anterior, opposite, contralateral. |
-| `aidcam_tools.eval_intellident` | Evaluation harness for the public 78-case margin-line benchmark from Intellident Dentaire (CBM 2025). |
 
 ## Install
 
@@ -65,16 +64,6 @@ from aidcam_tools.fdi import is_molar, opposite, quadrant
 is_molar(16)       # True
 opposite(11)       # 41  (upper right central → lower right central)
 quadrant(35)       # 3   (lower-left quadrant)
-```
-
-### Evaluate predicted margin lines against the Intellident benchmark
-
-```bash
-git clone https://github.com/intellident-ai/public-datasets
-aidcam-eval-intellident \
-  --benchmark public-datasets/ \
-  --predictions my_predictions/ \
-  --output report.json
 ```
 
 ## License

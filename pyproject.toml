@@ -42,7 +42,6 @@ Issues = "https://github.com/AID-CAM/aidcam-tools/issues"
 
 [project.scripts]
 aidcam-mesh-to-pc = "aidcam_tools.mesh_to_pointcloud:main"
-aidcam-eval-intellident = "aidcam_tools.eval_intellident:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
